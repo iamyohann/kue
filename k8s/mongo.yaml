@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kue-db
+  labels:
+    app: kue-db
+spec:
+  selector:
+    matchLabels:
+      app: kue-db
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kue-db
+    spec:
+      containers:
+      - name: kue-db
+        image: mongo
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 27017
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kue-db
+  labels:
+    app: kue-db
+spec:
+  type: ClusterIP
+  selector:
+    app: kue-db
+  ports:
+  - port: 27017
+    targetPort: 27017
+    protocol: TCP
+    name: kue-db-port

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Service"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NetworkAddress": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "Name": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Image": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "Port": {
+      "type": "biginteger",
+      "required": true,
+      "min": "1"
+    }
+  }
+}

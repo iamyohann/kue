@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+.font-source-pro {
+    font-family: 'Source Serif Pro', serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app.fancy-background {
+  background: #23074d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #23074d, #a34328); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #23074d, #a34328); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.app {
+  height: 100vh;
+  overflow: auto;
+}
+
+main {
+  padding: 4em;
+}

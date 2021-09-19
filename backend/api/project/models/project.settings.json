@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Services": {
+      "unique": true,
+      "collection": "service"
+    },
+    "Administrators": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "Members": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
