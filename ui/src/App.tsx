@@ -46,7 +46,7 @@ function App() {
         <header>
           <Header />
           <Route key="dashboard" exact path="/dashboard">
-            <BreadcrumbHeader items={[{ text: "Dashboard", href: "/" }]} />
+            <BreadcrumbHeader items={[{ text: "Dashboard", href: "/dashboard" }]} />
           </Route>
           <Route key="projects" exact path="/projects">
             <BreadcrumbHeader
