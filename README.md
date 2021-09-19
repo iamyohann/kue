@@ -3,8 +3,8 @@
 Run the backend
 
 ```
-cd backend
 ./mongo.sh
+cd backend
 yarn && yarn develop
 ```
 
